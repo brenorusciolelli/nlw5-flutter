@@ -1,5 +1,5 @@
-import 'package:DevQuiz/core/app_colors.dart';
 import 'package:DevQuiz/core/app_text_styles.dart';
+import 'package:DevQuiz/shared/widgets/progress_indicator/progressor_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChartWidget extends StatelessWidget {
@@ -12,16 +12,11 @@ class ChartWidget extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              height: 80,
-              width: 80,
-              child: CircularProgressIndicator(
-                strokeWidth: 10,
-                value: 0.75,
-                backgroundColor: AppColors.chartSecondary,
-                valueColor:
-                    AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
-              ),
-            ),
+                height: 80,
+                width: 80,
+                child: ProgressIndicatorWidget(
+                  value: 0.3,
+                )),
           ),
           Center(child: Text("75%", style: AppTextStyles.heading))
         ],
